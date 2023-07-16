@@ -6,7 +6,7 @@ namespace Calculator
    {
         static void Main()
         {
-            Console.WriteLine("Enter values: ");
+            Console.WriteLine("Enter values.");
             Console.Write("First number: ");
             string firstUserValue = Console.ReadLine();
             Console.Write("Second number: ");
@@ -16,7 +16,7 @@ namespace Calculator
             decimal firstNumber = Convert.ToDecimal(firstUserValue);
             decimal secondNumber = Convert.ToDecimal(secondUserValue);
 
-            Console.WriteLine("Here are your results: ");
+            Console.WriteLine("Calculating results...");
             Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
             Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
             Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
