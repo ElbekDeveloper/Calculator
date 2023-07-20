@@ -22,6 +22,15 @@ namespace Calculator
             Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
             Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
             Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
+            
+            string userAgeValue = Console.ReadLine();
+            int userAge = Convert.ToInt32(userAgeValue);
+
+            string message = (userAge >= 18 && userAge < 28) 
+                                ? "You are eligible to military service." 
+                                : "You are not eligible to military service.";
+
+            Console.WriteLine(message);
         }
    } 
 }
