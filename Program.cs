@@ -19,27 +19,19 @@ namespace Calculator
             decimal secondNumber = Convert.ToDecimal(secondUserValue);
 
             Console.WriteLine("Calculating results...");
-            switch(operation)
+
+            string template = $"{firstNumber} {operation} {secondNumber} =";
+            decimal result = operation switch
             {
-                case "+" :
-                    Console.WriteLine($"{firstNumber} + {secondNumber} = {firstNumber + secondNumber}");
-                    break;
-                case "-" :
-                    Console.WriteLine($"{firstNumber} - {secondNumber} = {firstNumber - secondNumber}");
-                    break;
-                case "*" :
-                    Console.WriteLine($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
-                    break;
-                case "/" :
-                    Console.WriteLine($"{firstNumber} / {secondNumber} = {firstNumber / secondNumber}");
-                    break;
-                case "%" :
-                    Console.WriteLine($"{firstNumber} % {secondNumber} = {firstNumber % secondNumber}");
-                    break;
-                default:
-                    Console.WriteLine("Unknown operation.");
-                    break;
-            }
+                "+" => firstNumber + secondNumber,
+                "-" => firstNumber - secondNumber,
+                "*" => firstNumber * secondNumber,
+                "/" => firstNumber / secondNumber,
+                "%" => firstNumber % secondNumber,
+                _ => 0
+            };
+
+            Console.WriteLine($"{template} {result}");
 
             System.Console.Write("Enter your age: ");
             string userAgeValue = Console.ReadLine();
